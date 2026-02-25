@@ -1,0 +1,70 @@
+.banner {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-l);
+  padding: var(--space-xxl) var(--space-l);
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text-description);
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-s);
+  padding: 12px var(--space-l);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  cursor: pointer;
+  margin: var(--space-s) 0;
+  font-family: var(--font-main);
+}
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-s);
+  margin-top: 12px;
+}
+
+.steps {
+  display: flex;
+  gap: 6px;
+}
+
+.step {
+  width: 32px;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: 3px;
+}
+
+.stepActive {
+  background-color: var(--color-text-main);
+}
+
+.counter {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}

@@ -1,0 +1,258 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: var(--space-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pageTitleActive {
+  color: var(--color-text-main);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.formSection {
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-l);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+}
+
+.textAreaWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.charCounter {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-l);
+}
+
+.charFail {
+  color: var(--color-error);
+}
+
+.generateBtn {
+  margin-top: auto;
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-s);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+.letterText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-description);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.loadingState {
+  background-color: var(--color-primary) !important;
+  cursor: wait;
+}
+
+.btnSpinner {
+  animation: spin 1s linear infinite;
+  color: var(--color-white);
+}
+
+.generateBtn:disabled:not(.loadingState) {
+  background-color: #d2d5da !important;
+  color: #9ca3af !important;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.generateBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.generateBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.generateBtn:disabled {
+  background-color: #d2d5da;
+  color: #9ca3af;
+  opacity: 1;
+  cursor: not-allowed;
+  border: none;
+}
+
+.tryAgainBtn {
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}
+
+.tryAgainBtn:hover:not(:disabled) {
+  background-color: var(--color-bg-alt);
+  border-color: #dcdcdc;
+}
+
+.previewSection {
+  background-color: var(--color-bg-preview);
+  border-radius: var(--radius-l);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--color-border);
+}
+
+.letterText,
+.emptyPreview,
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.emptyPreview {
+  color: var(--color-text-description);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.copyBtn {
+  align-self: flex-end;
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: var(--color-text-description);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  cursor: pointer;
+  padding-top: var(--space-l);
+  font-family: var(--font-main);
+}
+
+.copyBtn:hover {
+  color: var(--color-text-main);
+}
+
+.loaderWrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.copyBtnSuccess {
+  color: var(--color-primary) !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
+
+  .previewSection {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    padding: 20px;
+  }
+}

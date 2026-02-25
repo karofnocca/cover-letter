@@ -1,0 +1,40 @@
+.deleteBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #475467;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-main);
+  transition: all 0.3s;
+  line-height: 1;
+}
+
+.deleteBtn:hover {
+  color: var(--color-text-main);
+}
+
+.icon {
+  margin-bottom: 5px;
+}
+
+.deleteBtn:active {
+  transform: scale(0.95);
+}
+
+.deleteBtn:focus-visible {
+  outline: 2px solid var(--color-error);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  .deleteBtn {
+    font-size: 14px;
+  }
+}

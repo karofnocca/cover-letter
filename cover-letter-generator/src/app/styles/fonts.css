@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'FixelDisplay';
+  src: url('/src/shared/assets/fonts/FixelDisplay-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FixelDisplay';
+  src: url('/src/shared/assets/fonts/FixelDisplay-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FixelText';
+  src: url('/src/shared/assets/fonts/FixelText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FixelText';
+  src: url('/src/shared/assets/fonts/FixelText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FixelText';
+  src: url('/src/shared/assets/fonts/FixelText-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

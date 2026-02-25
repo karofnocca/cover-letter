@@ -1,0 +1,64 @@
+.banner {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-l);
+  padding: 60px var(--space-m);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: var(--space-l);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-description);
+  max-width: 400px;
+  line-height: 1.5;
+  margin-bottom: var(--space-xl);
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-s);
+  padding: 12px var(--space-l);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  font-family: var(--font-main);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-primary-hover);
+}
+
+.footer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
