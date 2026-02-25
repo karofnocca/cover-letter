@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Check } from 'lucide-react';
+import { House, Check } from 'lucide-react';
 import s from './Header.module.css';
 import { useApplicationStore } from '../../../entities/application/model/store';
 import Logomark from '../../../shared/assets/icons/Logomark.svg';
@@ -43,7 +43,7 @@ export const Header = () => {
             )}
           </div>
           <button className={s.iconButton} onClick={() => navigate('/')}>
-            <User size={18} />
+            <House size={18} />
           </button>
         </div>
       </div>
